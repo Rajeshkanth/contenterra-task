@@ -1,0 +1,104 @@
+[debug] [2023-11-16T02:30:44.438Z] ----------------------------------------------------------------------
+[debug] [2023-11-16T02:30:44.445Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2023-11-16T02:30:44.446Z] CLI Version:   12.9.1
+[debug] [2023-11-16T02:30:44.448Z] Platform:      win32
+[debug] [2023-11-16T02:30:44.449Z] Node Version:  v18.16.0
+[debug] [2023-11-16T02:30:44.451Z] Time:          Thu Nov 16 2023 08:00:44 GMT+0530 (India Standard Time)
+[debug] [2023-11-16T02:30:44.451Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-16T02:30:44.491Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-16T02:30:44.492Z] > authorizing via signed-in user (rajeshkanth4051@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\React\myapp
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-11-16T02:32:07.720Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-11-16T02:32:07.721Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"json-file-map","name":"json-file-map"}
+[debug] [2023-11-16T02:32:10.133Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-11-16T02:32:10.134Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.8580777083533780906"}
+[debug] [2023-11-16T02:32:10.139Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8580777083533780906 [none]
+[debug] [2023-11-16T02:32:14.826Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8580777083533780906 200
+[debug] [2023-11-16T02:32:14.827Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.8580777083533780906 {"name":"operations/cp.8580777083533780906","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"48287587541","projectId":"json-file-map","lifecycleState":"ACTIVE","name":"json-file-map","createTime":"2023-11-16T02:32:13.421Z"}}
+[debug] [2023-11-16T02:32:14.835Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/json-file-map:addFirebase [none]
+[debug] [2023-11-16T02:32:16.641Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/json-file-map:addFirebase 403
+[debug] [2023-11-16T02:32:16.642Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/json-file-map:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-11-16T02:32:16.644Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-11-16T02:32:17.050Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
+[debug] [2023-11-16T02:34:03.754Z] ----------------------------------------------------------------------
+[debug] [2023-11-16T02:34:03.763Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2023-11-16T02:34:03.765Z] CLI Version:   12.9.1
+[debug] [2023-11-16T02:34:03.766Z] Platform:      win32
+[debug] [2023-11-16T02:34:03.767Z] Node Version:  v18.16.0
+[debug] [2023-11-16T02:34:03.769Z] Time:          Thu Nov 16 2023 08:04:03 GMT+0530 (India Standard Time)
+[debug] [2023-11-16T02:34:03.770Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-16T02:34:03.798Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-16T02:34:03.800Z] > authorizing via signed-in user (rajeshkanth4051@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\React\myapp
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-11-16T02:36:04.403Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-11-16T02:36:04.404Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"fetchfromreddit","name":"fetchfromreddit"}
+[debug] [2023-11-16T02:36:06.780Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-11-16T02:36:06.781Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.7145075982896329792"}
+[debug] [2023-11-16T02:36:06.786Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7145075982896329792 [none]
+[debug] [2023-11-16T02:36:08.811Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7145075982896329792 200
+[debug] [2023-11-16T02:36:08.812Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7145075982896329792 {"name":"operations/cp.7145075982896329792"}
+[debug] [2023-11-16T02:36:09.317Z] [Project Creation Poller] Retrying task index 0
+[debug] [2023-11-16T02:36:09.319Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7145075982896329792 [none]
+[debug] [2023-11-16T02:36:12.205Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7145075982896329792 200
+[debug] [2023-11-16T02:36:12.205Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.7145075982896329792 {"name":"operations/cp.7145075982896329792","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"603261011476","projectId":"fetchfromreddit","lifecycleState":"ACTIVE","name":"fetchfromreddit","createTime":"2023-11-16T02:36:09.829Z"}}
+[debug] [2023-11-16T02:36:12.217Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/fetchfromreddit:addFirebase [none]
+[debug] [2023-11-16T02:36:14.336Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/fetchfromreddit:addFirebase 403
+[debug] [2023-11-16T02:36:14.336Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/fetchfromreddit:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-11-16T02:36:14.338Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-11-16T02:36:14.791Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.

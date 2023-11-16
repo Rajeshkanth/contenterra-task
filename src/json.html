@@ -1,0 +1,305 @@
+<!-- HTML file -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamically Generated Form</title>
+  </head>
+  <body>
+    <div id="form-container"></div>
+
+    <script>
+      // Example JSON object
+      const jsonObject = {
+        form: {
+          fields: [
+            {
+              type: "label",
+              labelAttributes: {
+                class: "form-label",
+                for: "inputField1",
+              },
+              text: "Label 1",
+            },
+            {
+              type: "input",
+              inputAttributes: {
+                type: "text",
+                class: "form-control",
+                id: "inputField1",
+                name: "inputField1",
+                placeholder: "Enter text",
+                hint: "Please enter some text",
+              },
+            },
+            {
+              type: "label",
+              labelAttributes: {
+                class: "form-label",
+                for: "inputField2",
+              },
+              text: "Label 2",
+            },
+            {
+              type: "input",
+              inputAttributes: {
+                type: "email",
+                class: "form-control",
+                id: "inputField2",
+                name: "inputField2",
+                placeholder: "Enter email",
+                hint: "Please enter a valid email address",
+              },
+            },
+            {
+              type: "button",
+              buttonAttributes: {
+                type: "submit",
+                class: "btn btn-primary",
+                id: "submitButton",
+              },
+              text: "Submit",
+            },
+          ],
+        },
+      };
+
+      // Function to generate the form
+      function generateFormFromJSON(jsonObject) {
+        const formContainer = document.getElementById("form-container");
+        const fields = jsonObject.form.fields;
+
+        fields.forEach((field) => {
+          if (field.type === "label") {
+            const label = document.createElement("label");
+            label.setAttribute("class", field.labelAttributes.class);
+            label.setAttribute("for", field.labelAttributes.for);
+            label.textContent = field.text;
+            formContainer.appendChild(label);
+          } else if (field.type === "input") {
+            const input = document.createElement("input");
+            const attributes = field.inputAttributes;
+            for (const key in attributes) {
+              input.setAttribute(key, attributes[key]);
+            }
+            formContainer.appendChild(input);
+          } else if (field.type === "button") {
+            const button = document.createElement("button");
+            const attributes = field.buttonAttributes;
+            for (const key in attributes) {
+              button.setAttribute(key, attributes[key]);
+            }
+            button.textContent = field.text;
+            formContainer.appendChild(button);
+          }
+        });
+      }
+
+      // Call the function to generate the form
+      generateFormFromJSON(jsonObject);
+    </script>
+  </body>
+</html>
+
+//else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "email"
+            // ) {
+            //   return (
+            //     <input
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       placeholder={element.inputAttributes.placeholder}
+            //       hint={element.inputAttributes.hint}
+            //     />
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "tel"
+            // ) {
+            //   return (
+            //     <>
+            //       <input
+            //         key={index}
+            //         type={element.inputAttributes.type}
+            //         className={element.inputAttributes.class}
+            //         id={element.inputAttributes.id}
+            //         name={element.inputAttributes.name}
+            //         placeholder={element.inputAttributes.placeholder}
+            //         hint={element.inputAttributes.hint}
+            //         value={tele}
+            //         onChange={(e) => handleInput("tele", e)}
+            //       />
+            //       {!regex.regexNum.test(tele) ? teleAlert : null}
+            //     </>
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "number"
+            // ) {
+            //   return (
+            //     <input
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       placeholder={element.inputAttributes.placeholder}
+            //       hint={element.inputAttributes.hint}
+            //     />
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "password"
+            // ) {
+            //   return (
+            //     <input
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       placeholder={element.inputAttributes.placeholder}
+            //       hint={element.inputAttributes.hint}
+            //     />
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "date"
+            // ) {
+            //   return (
+            //     <input
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       placeholder={element.inputAttributes.placeholder}
+            //       hint={element.inputAttributes.hint}
+            //     />
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "time"
+            // ) {
+            //   return (
+            //     <input
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       placeholder={element.inputAttributes.placeholder}
+            //       hint={element.inputAttributes.hint}
+            //     />
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "radio"
+            // ) {
+            //   return (
+            //     <input
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       placeholder={element.inputAttributes.placeholder}
+            //       hint={element.inputAttributes.hint}
+            //     />
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "checkbox"
+            // ) {
+            //   return (
+            //     <input
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       placeholder={element.inputAttributes.placeholder}
+            //       hint={element.inputAttributes.hint}
+            //     />
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "color"
+            // ) {
+            //   return (
+            //     <input
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       placeholder={element.inputAttributes.placeholder}
+            //       hint={element.inputAttributes.hint}
+            //     />
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "file"
+            // ) {
+            //   return (
+            //     <input
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       placeholder={element.inputAttributes.placeholder}
+            //       hint={element.inputAttributes.hint}
+            //       accept={[
+            //         element.inputAttributes.accept.audio,
+            //         element.inputAttributes.accept.video,
+            //         element.inputAttributes.accept.pdf,
+            //         element.inputAttributes.accept.image,
+            //       ]}
+            //     />
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "textarea"
+            // ) {
+            //   return (
+            //     <textarea
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       placeholder={element.inputAttributes.placeholder}
+            //       hint={element.inputAttributes.hint}
+            //     />
+            //   );
+            // } else if (
+            //   element.type === "input" &&
+            //   element.inputAttributes.type === "select"
+            // ) {
+            //   return (
+            //     <select
+            //       key={index}
+            //       type={element.inputAttributes.type}
+            //       className={element.inputAttributes.class}
+            //       id={element.inputAttributes.id}
+            //       name={element.inputAttributes.name}
+            //       hint={element.inputAttributes.hint}
+            //     >
+            //       <option value={element.inputAttributes.option.option1}>
+            //         {element.inputAttributes.option.option1}
+            //       </option>
+            //       <option value={element.inputAttributes.option.option2}>
+            //         {element.inputAttributes.option.option2}
+            //       </option>
+            //       <option value={element.inputAttributes.option.option3}>
+            //         {element.inputAttributes.option.option3}
+            //       </option>
+            //     </select>
+            //   );
+            // }
